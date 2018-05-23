@@ -46,7 +46,7 @@ class GreeterTestCase(unittest.TestCase):
     @patch('hash.datetime')
     def test_greet_4(self, mock_datetime):
         gr = Greeter()
-        mock_datetime.now.return_result = datetime.strptime('2018-05-23 12:30', "%Y-%d-%m %I:%M")
+        mock_datetime.datetime.time.return_value = datetime.time()
         self.assertEqual(gr.greet('ivan'), 'Good evening Ivan')
 
 
